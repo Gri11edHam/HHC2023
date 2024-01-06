@@ -1,0 +1,135 @@
+# Reference: https://squidfunk.github.io/mkdocs-material/reference/
+site_name: SANS HHC 2023 Write-Up
+site_author: GrilledHam
+theme:
+  icon:
+    # Material for MkDocs bundles several icon sets:
+    # - Material Design (https://materialdesignicons.com/)
+    # - FontAwesome (https://fontawesome.com/search?m=free)
+    # - Octicons (https://octicons.github.com/)
+    # - Simple Icons (https://simpleicons.org/)
+    # Below are some suitable logo examples: 
+    # logo: fontawesome/regular/snowflake
+    logo: fontawesome/solid/sleigh
+    # logo: fontawesome/solid/candy-cane
+    # logo: fontawesome/solid/tree
+  name: material
+  favicon: img/misc/favicon.ico
+  features:
+    - toc.integrate
+    - content.code.copy
+    - navigation.sections
+    #- navigation.instant
+    #- navigation.top
+    #- navigation.tabs
+    #- navigation.tabs.sticky
+    #- navigation.expand
+    #- navigation.top
+    #- navigation.prune
+    #- toc.follow
+  palette:
+    # Material for MkDocs supports a light (default) and dark (slate) theme.
+    # Each mode supports configurable primary and accent colors.
+    # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+    # Primary colors:
+    # red, pink, purple, deep purple, indigo, blue, light blue, cyan, teal,
+    # green, light green, lime, yellow, amber, orange, deep orange, brown,
+    # grey, blue grey, black, and white.
+    # Accent colors:
+    # red, pink, purple, deep purple, indigo, blue, light blue, cyan, teal,
+    # green, light green, lime, yellow, amber, orange, and deep orange.
+    # Palette toggle for light mode
+    - scheme: default
+      primary: cyan
+      accent: cyan
+      toggle:
+        icon: material/weather-night 
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: cyan
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+extra:
+  social:
+    # - icon: fontawesome/brands/twitter
+    #   link: https://twitter.com/<twitter_username>
+    #   name: Twitter
+    - icon: fontawesome/brands/github
+      link: https://github.com/Gri11edHam
+      name: GitHub
+    # - icon: fontawesome/brands/instagram
+    #   link: https://www.instagram.com/<instagram_username>
+    #   name: Instagram
+extra_css:
+  - css/extra.css
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - js/tablesort.js
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - meta
+  - footnotes
+  - def_list
+  - toc:
+      permalink: ⚓︎
+      toc_depth: 2
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+nav:
+# The 'nav' section defines the content of the sidebar navigation.
+- Welcome: 'index.md'
+- Objectives:
+  - Christmas Island:
+    - Orientation: 'objectives/orientation.md'
+    - Snowball Fight: 'objectives/snowball_fight.md'
+    - Linux 101: 'objectives/linux_101.md'
+    - Reportinator: 'objectives/reportinator.md'
+    - Azure 101: 'objectives/azure_101.md'
+  - Island of Misfit Toys:
+    - Luggage Lock: 'objectives/luggage_lock.md'
+    - Linux PrivEsc: 'objectives/linux_privesc.md'
+    - Hashcat: 'objectives/hashcat.md'
+  - Film Noir Island:
+    - Na'an: 'objectives/na_an.md'
+    - KQL Kraken Hunt: 'objectives/kql_kraken_hunt.md'
+    - Phish Detection Agency: 'objectives/phish_detection_agency.md'
+  - Pixel Island:
+    - Elf Hunt: 'objectives/elf_hunt.md'
+    - Certificate SSHenanigans: 'objectives/certificate_sshenanigans.md'
+  - Steampunk Island:
+    - Faster Lock Combination: 'objectives/faster_lock_combination.md'
+    - The Captain's Comms: 'objectives/the_captains_comms.md'
+    - Active Directory: 'objectives/active_directory.md'
+  - Space Island:
+    - Door Access Speaker: 'objectives/door_access_speaker.md'
+    - Camera Access: 'objectives/camera_access.md'
+    - Missile Diversion: 'objectives/missile_diversion.md'
+  - Others:
+    - 'Game Cartridges: Vol 1': 'objectives/game_cartridges_1.md'
+    - 'Game Cartridges: Vol 2': 'objectives/game_cartridges_2.md'
+    - 'Game Cartridges: Vol 3': 'objectives/game_cartridges_3.md'
+    - BONUS! Fishing Guide: 'objectives/fishing_guide.md'
+    - BONUS! Fishing Mastery: 'objectives/fishing_mastery.md'
+- Extras:
+  - Easter Eggs: 'easter_eggs.md'

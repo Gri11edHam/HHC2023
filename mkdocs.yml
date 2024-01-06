@@ -1,6 +1,7 @@
 # Reference: https://squidfunk.github.io/mkdocs-material/reference/
 site_name: SANS HHC 2023 Write-Up
 site_author: GrilledHam
+copyright: Copyright &copy; 2023 Brian DeBaggis
 theme:
   icon:
     # Material for MkDocs bundles several icon sets:
